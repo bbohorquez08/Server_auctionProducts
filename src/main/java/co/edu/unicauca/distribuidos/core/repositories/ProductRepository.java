@@ -102,9 +102,9 @@ public class ProductRepository {
     }
 
     private void cargarDatos(){
-        ProductEntity obj1 = new ProductEntity(1,"arroz",23000,State.En_Subasta);
+        ProductEntity obj1 = new ProductEntity(1,"arroz",23000,State.En_Subasta,0L);
         this.lstProduct.add(obj1);
-        ProductEntity obj2 = new ProductEntity(2,"azucar",17000,State.Pendiente);
+        ProductEntity obj2 = new ProductEntity(2,"azucar",17000,State.Pendiente,0L);
         this.lstProduct.add(obj2);
     }
 }

@@ -13,6 +13,8 @@ public class ProductDTO {
     private String name;
     private long initValue;
     private State state;
-
-    public ProductDTO(){}
+    private long currentBid;
+    public ProductDTO(){
+        this.setCurrentBid(0L);
+    }
 }

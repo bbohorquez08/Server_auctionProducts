@@ -30,37 +30,32 @@ public class ServiceProductImpl implements IServiceProduct {
     public ProductDTO createProduct(ProductDTO product) {
         ProductEntity objEntity = this.modelMapper.map(product,ProductEntity.class);
         ProductEntity objProductEntity = this.productRepository.save(objEntity);
-        ProductDTO productDTO = this.modelMapper.map(objProductEntity,ProductDTO.class);
-        return productDTO;
+        return this.modelMapper.map(objProductEntity,ProductDTO.class);
     }
 
     @Override
     public List<ProductDTO> findAll() {
         List<ProductEntity> lstEntity = this.productRepository.findAll();
-        List<ProductDTO> lstDTO = this.modelMapper.map(lstEntity,new TypeToken<List<ProductDTO>>(){}.getType());
-        return lstDTO;
+        return this.modelMapper.map(lstEntity,new TypeToken<List<ProductDTO>>(){}.getType());
     }
 
     @Override
     public List<ProductDTO> findAllByState() {
         List<ProductEntity> lstEntity = this.productRepository.findAllByEstate();
-        List<ProductDTO> lstDTO = this.modelMapper.map(lstEntity,new TypeToken<List<ProductDTO>>(){}.getType());
-        return lstDTO;
+        return this.modelMapper.map(lstEntity,new TypeToken<List<ProductDTO>>(){}.getType());
     }
 
     @Override
     public ProductDTO findById(int code) {
         ProductEntity objEntity = this.productRepository.findByID(code);
-        ProductDTO objDTO = this.modelMapper.map(objEntity,ProductDTO.class);
-        return objDTO;
+        return this.modelMapper.map(objEntity,ProductDTO.class);
     }
 
     @Override
     public ProductDTO update(int code, ProductDTO product) {
         ProductEntity productEntity = this.modelMapper.map(product,ProductEntity.class);
         ProductEntity productEntityUpdate = this.productRepository.update(code,productEntity);
-        ProductDTO productDTO = this.modelMapper.map(productEntityUpdate,ProductDTO.class);
-        return productDTO;
+        return this.modelMapper.map(productEntityUpdate,ProductDTO.class);
     }
 
     @Override

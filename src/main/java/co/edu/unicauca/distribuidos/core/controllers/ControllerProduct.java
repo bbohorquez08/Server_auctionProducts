@@ -41,7 +41,7 @@ public class ControllerProduct {
         return this.serviceProduct.findAllByState();
     }
 
-    @PutMapping("/{code}")
+    @PatchMapping("/{code}")
     @ResponseBody
     public ProductDTO update(@RequestBody ProductDTO product, @PathVariable int code){
         ProductDTO objProduct = null;
