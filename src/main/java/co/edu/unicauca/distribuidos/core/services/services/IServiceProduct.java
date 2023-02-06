@@ -12,7 +12,7 @@ public interface IServiceProduct {
     //METODO QUE ME PERMITE OBTENER TODOS LOS PRODUCTOS
     public List<ProductDTO> findAll();
     //METODO QUE ME PERMITE OBTENER PRODUCTO POR ESTADO
-    public List<ProductDTO> findAllByState();
+    public ProductDTO findByState();
     //METODO QUE ME PERMITE OBTENER UN PRODUCTO EN ESPECIFICO
     public ProductDTO findById(int code);
     //METODO QUE ME PERMITE EDITAR EL PRODUCTO

@@ -37,11 +37,11 @@ public class ControllerProduct {
     }
 
     @GetMapping("/state")
-    public List<ProductDTO> findAllByState(){
-        return this.serviceProduct.findAllByState();
+    public ProductDTO findByState(){
+        return this.serviceProduct.findByState();
     }
 
-    @PatchMapping("/{code}")
+    @PutMapping("/{code}")
     @ResponseBody
     public ProductDTO update(@RequestBody ProductDTO product, @PathVariable int code){
         ProductDTO objProduct = null;

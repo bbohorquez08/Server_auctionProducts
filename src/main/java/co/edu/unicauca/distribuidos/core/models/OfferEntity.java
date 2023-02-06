@@ -7,14 +7,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
+public class OfferEntity {
+    private ClientEntity client;
+    private ProductEntity product;
+    private long value;
 
-public class ProductEntity {
-    private int code;
-    private String name;
-    private long initValue;
-    private State state;
-
-    public ProductEntity(){
+    public OfferEntity(){
 
     }
 }

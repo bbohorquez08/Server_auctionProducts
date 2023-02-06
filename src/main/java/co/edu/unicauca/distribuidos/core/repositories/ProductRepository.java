@@ -22,7 +22,7 @@ public class ProductRepository {
         System.out.println("Invocando a listar todos");
         return this.lstProduct;
     }
-    
+    /*
     public List<ProductEntity> findAllByEstate(){
 
         System.out.println("Invocando a listar dependiendo del estado");
@@ -34,6 +34,8 @@ public class ProductRepository {
         }
         return lstAux;
     }
+
+     */
 
     public ProductEntity findByEstate(){
         System.out.println("Invocando a consultar producto por estado");
@@ -102,9 +104,9 @@ public class ProductRepository {
     }
 
     private void cargarDatos(){
-        ProductEntity obj1 = new ProductEntity(1,"arroz",23000,State.En_Subasta,0L);
+        ProductEntity obj1 = new ProductEntity(1,"arroz",23000,State.En_Subasta);
         this.lstProduct.add(obj1);
-        ProductEntity obj2 = new ProductEntity(2,"azucar",17000,State.Pendiente,0L);
+        ProductEntity obj2 = new ProductEntity(2,"azucar",17000,State.Pendiente);
         this.lstProduct.add(obj2);
     }
 }

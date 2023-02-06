@@ -40,10 +40,12 @@ public class ServiceProductImpl implements IServiceProduct {
     }
 
     @Override
-    public List<ProductDTO> findAllByState() {
-        List<ProductEntity> lstEntity = this.productRepository.findAllByEstate();
-        return this.modelMapper.map(lstEntity,new TypeToken<List<ProductDTO>>(){}.getType());
+    public ProductDTO findByState() {
+        ProductEntity objEntity = this.productRepository.findByEstate();
+        return this.modelMapper.map(objEntity,ProductDTO.class);
     }
+
+
 
     @Override
     public ProductDTO findById(int code) {
