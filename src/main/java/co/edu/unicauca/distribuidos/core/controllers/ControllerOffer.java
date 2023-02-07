@@ -18,8 +18,8 @@ public class ControllerOffer {
 
     @PostMapping("/")
     @ResponseBody
-    public OfferDTO create(@RequestBody OfferDTO product){
-        return this.serviceOffer.create(product);
+    public OfferDTO create(@RequestBody OfferDTO offer){
+        return this.serviceOffer.create(offer);
     }
 
     @GetMapping("/")
